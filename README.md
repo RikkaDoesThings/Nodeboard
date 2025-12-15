@@ -13,6 +13,7 @@ Nodeboard is a lightweight, local-first visual board for organizing ideas, tasks
 - Portable preview & restore: preview backup JSON in Settings and restore a snapshot when you need to roll back.
 
 **The Idea**
+
 Nodeboard focuses on being a small, personal workspace where structure is light and flexible. It lets you visually arrange ideas and tasks, persist snapshots (backups) locally, and import/export JSON snapshots to share or archive boards. The app is intentionally offline-first and stores user data locally by default.
 
 **Key Features**
