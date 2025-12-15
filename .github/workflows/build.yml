@@ -1,0 +1,49 @@
+name: Build Electron apps
+
+on:
+  workflow_dispatch:
+  push:
+    tags: [ 'v*', 'release-*' ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build renderer (Vite)
+        run: npm run build
+
+      - name: Package Electron app
+        env:
+          CSC_LINK: ${{ secrets.CSC_LINK }}
+          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+        run: |
+          if [ "${{ matrix.os }}" = "macos-latest" ]; then
+            npx electron-builder --mac
+          elif [ "${{ matrix.os }}" = "windows-latest" ]; then
+            npx electron-builder --win
+          else
+            npx electron-builder --linux
+          fi
+        shell: bash
+
+      - name: Upload artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nodeboard-${{ matrix.os }}
+          path: |
+            dist/**
