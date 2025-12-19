@@ -89,7 +89,7 @@ Fixed
 [*] Fixed backups not working properly in some cases.
 
 To be fixed/added!
-[+] Backups creating a backup way too frequently
+[+] Backups backing up way too frequently
 [+] Error handling for all operations
 [+] Collapsing collections
 [+] Node conversion (from node to routine or to-do item)
