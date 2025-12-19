@@ -35,7 +35,36 @@ Nodeboard focuses on being a small, personal workspace where structure is light 
 - Backups are plain JSON files stored on disk — handle them like any other file if you need encryption or cloud sync.
 
 **Development / Installation**
-- Installation and build instructions: 
+- Installation and build instructions:
+    - Windows
+        - Zip:
+            - Download and extract the Windows zip package in [releases](https://github.com/RikkaDoesThings/Nodeboard/releases).
+            - Run the .exe file labeled "Nodeboard.exe"
+
+        - Installer:
+            - Download the "Nodeboard Setup {version}.exe" from the [releases](https://github.com/RikkaDoesThings/Nodeboard/releases) page.
+            - Run the installer and install the Nodeboard.
+
+    - macOS
+        - Zip:
+            - (Explanation when version is published to [releases](https://github.com/RikkaDoesThings/Nodeboard/releases) page)
+
+        - Installer:
+            - (Explanation when version is published to [releases](https://github.com/RikkaDoesThings/Nodeboard/releases) page)
+
+    - Linux
+        - Zip:
+            - (Explanation when version is published to [releases](https://github.com/RikkaDoesThings/Nodeboard/releases) page)
+
+        - Installer:
+            - (Explanation when version is published to [releases](https://github.com/RikkaDoesThings/Nodeboard/releases) page)
+
+    - Build
+        - Install [npm and Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), unless already installed.
+        - Download and extract the source code from the [GitHub](https://github.com/RikkaDoesThings/Nodeboard)
+        - (Just in case) run "npm run dev" to make sure your source code works.
+        - To build, run `npm run package:{platform}` (replace {platform} with your platform of choice: win, linux, mac. Example: `npm run package:linux`)
+        - When finished, you'll have an installer and a folder containing the raw Nodeboard package.
 
 - Developer notes: The renderer is built with Vite + React; Electron is used for the desktop shell. Typical dev flow uses `npm run dev` for local development and `npm run package:win` (or equivalent) for packaging.
 
