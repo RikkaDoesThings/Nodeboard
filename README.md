@@ -96,7 +96,7 @@ To be fixed/added!
 ```
 
 ### Contact & License
-- Discord: [kishirooo](https://discordapp.com/users/1009717580270948372)
+- Discord: [rikkadoesthings](https://discordapp.com/users/1009717580270948372)
 - Email: [rikkadoesthings@gmail.com](mailto:rikkadoesthings@gmail.com)
-- Copyright © 2025 Rikka. All rights reserved.
+- Copyright © 2026 Rikka. All rights reserved.
 - Licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
